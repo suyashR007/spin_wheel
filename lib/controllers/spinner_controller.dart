@@ -27,6 +27,10 @@ class SpinnerController extends GetxController {
 
     Get.dialog(
       alertDialog(questionAsk),
+    ).then(
+      (value) {
+        answerController.text = '';
+      },
     );
   }
 
