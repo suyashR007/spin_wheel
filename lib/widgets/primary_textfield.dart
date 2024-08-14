@@ -40,7 +40,6 @@ class PrimaryTextField extends StatelessWidget {
           inputFormatters: inputFormatters,
           decoration: InputDecoration(
               helperText: hintText,
-              labelText: hintText,
               contentPadding:
                   const EdgeInsets.symmetric(vertical: 12.0, horizontal: 12),
               alignLabelWithHint: true,
