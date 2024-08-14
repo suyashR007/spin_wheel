@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:spin_wheel/screens/spinning_wheel.dart';
+import 'package:get/get.dart';
+import 'package:spin_wheel/controllers/spinner_controller.dart';
+import 'package:spin_wheel/widgets/spinning_wheel.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -9,6 +11,18 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  @override
+  void initState() {
+    super.initState();
+    Get.put(SpinnerController());
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    Get.find<SpinnerController>().dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
